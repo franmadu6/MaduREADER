@@ -1,0 +1,47 @@
+{% extends "basefree.html" %}
+{% block free2 %}
+
+<body>
+
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            Libros
+                        </h2>
+                        <hr />
+                        <div>
+
+                            {% for i in title %}
+                            <p>Titulo: {{ i }}</p>
+
+                            <p>ISBN: {{ isbn[loop.index -1] | replace("[", "") | replace("]", "") | replace("'", "")}}</p>
+
+                            <p>Autor: {{ author[loop.index -1] | replace("[", "") | replace("]", "") | replace("'", "")}}</p>
+                            
+                            <p>Editoriales: {{ pub[loop.index -1] | replace("[", "") | replace("]", "") | replace("'", "")}}</p>   
+                                  
+                            <p>Idioma: {{ leng[loop.index -1] | replace("[", "") | replace("]", "") | replace("'", "")}}</p>   
+                                                              
+                            <a class="lagartija" href="https://openlibrary.org{{ key[loop.index -1] }}">Enlace al libro</a>   
+                             
+                            <!--<div class="ol_readapi_book">
+                            <a href="http://www.archive.org/stream/">
+                            <img class="ol_readapi_button" src="http://openlibrary.org/images/button-read-open-library.png">   
+                            
+                            </a> 
+                            </div>   -->                               
+                            <hr/>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+    {% endblock %}

@@ -1,2 +1,2 @@
 # MaduREADER
-Pagina web dinamica de recopilación de libros
+Aplicacion para poder leer libros mientras escuchas musica relajante, tambien podras tu propia libreria.

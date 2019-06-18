@@ -1,0 +1,67 @@
+{% extends "basefree.html" %} 
+{% block free %}
+    <body>
+
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            Libros
+                        </h2>
+                        <p class="light">
+                            ¿Que libro busca?
+                        </p>
+                        <p class="body">
+                            Esta aplicación esta basada en la base de datos de <strong>Open Library</strong>, en la que podras acceder a miles de libros disponibles.
+                        </p>
+                        <p class="body">
+                            Actualmente nuestra <strong>base de datos</strong> es actualizada diariamente, solo tienes que poner el nombre del libro que deseas buscar.
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+
+    <section class="contact section-wrapper" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>
+                        Sistema de obtención de libro
+                    </h2>
+                    <p class="sub">
+                        ¡Hora de leer!
+                    </p>
+                    <div>
+                        <p><br><br></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 contactform">
+                    <form action="/free2" method="post">
+                        <!-- Name -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- E-Mail -->
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-white" id="name" name="libro" placeholder="Libro">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Message Area -->
+                        <!-- Subtmit Button -->
+                        <button type="submit" class="btn btn-send" input id="cfsubmit" value="buscar">
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section> <!-- /.contact -->
+    <!-- /#contact -->
+{% endblock %}
+
+ 

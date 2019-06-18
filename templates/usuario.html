@@ -1,0 +1,60 @@
+{% extends "baseusuario.html" %} 
+{% block usuario %}
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            Usuarios
+                        </h2>
+                        <p class="light">
+                            ¿Que usuario busca?
+                        </p>
+                        <p class="body">
+                            Puedes buscar las <strong>listas</strong> que tienen los usuarios de nuestra aplicación.
+                        </p>
+                        <p class="body">
+                            Estas listas se pueden ver <strong>modificadas </strong> por los dueños de las mismas.
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+
+    <section class="contact section-wrapper" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>
+                        Sistema de obtención de usuario
+                    </h2>
+                    <p class="sub">
+                        Encuentra
+                    <div>
+                        <p><br><br></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 contactform">
+                    <form action="/usuario2" method="post">
+                        <!-- Name -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- E-Mail -->
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-white" id="name" name="usuario" placeholder="Usuario">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Message Area -->
+                        <!-- Subtmit Button -->
+                        <button type="submit" class="btn btn-send" input id="cfsubmit" value="Say Hello">
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+  {% endblock %}

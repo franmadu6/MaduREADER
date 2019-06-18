@@ -1,0 +1,50 @@
+{% extends "basegoogle.html" %}
+{% block google2 %}
+
+<body>
+
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            LibrosGoogle<img src="https://data.apkhere.com/6d/com.google.android.apps.books/5.1.9.rc06.250503688/icon.png!s">
+                        </h2>
+                        <hr />
+                        <div>
+
+                            {% for i in title %}
+                            <p>Titulo: {{ i }}</p>
+                            
+                            <p>Autor: {{ autor[loop.index -1] | replace("[", "") | replace("]", "") | replace("'", "") }}</p>
+
+                            <p>Editorial: {{ published[loop.index -1] }}</p>
+
+                            <p>Año de publicación: {{ date[loop.index -1] }}</p>  
+                                  
+                            <p>Idioma: {{ leng[loop.index -1] }}</p>
+                            
+                            <p>Descripción: {{ defin[loop.index -1] }}</p> 
+                             
+                            <div class="imagina">
+                                <img src="{{ img[loop.index -1] }}">
+                            </div>                                                            
+                            <div>
+                            <a href="{{ pdf[loop.index -1] }}">
+                            <img class="ol_readapi_button" src="http://openlibrary.org/images/button-read-open-library.png">   
+                            </a> 
+                            </div> 
+                                
+                            <hr/>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+    {% endblock %}

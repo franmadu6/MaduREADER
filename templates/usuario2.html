@@ -1,0 +1,40 @@
+{% extends "baseusuario.html" %}
+{% block usuario2 %}
+
+<body>
+
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            Listas del usuario: 
+                        </h2>
+                        <div>
+                            <hr class="bilbo"/>
+                            {% for i in name %}
+                            <p>Nombre: {{ i }}</p>
+
+                            <p>Libros: {{ seed_count[loop.index -1] }}</p>
+
+                            <p>Recuento de ediciones: {{ edition_count[loop.index -1] }}</p> 
+                            
+                            <p><a class="lagartija" href="/listas/{{ url[loop.index -1][2] }}/{{ url[loop.index -1][4] }}">Enlace interno MaduReader</a></p>
+                            
+                            <p><a class="lagartija" href="https://openlibrary.org{{ full_url[loop.index -1] }}">Enlace externo OpenLibrary</a></p>
+                                  
+                            <p>Ultima actualización: {{ last_update[loop.index -1] }}</p>  
+                                   
+                            <hr class="bilbo"/>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+    {% endblock %}

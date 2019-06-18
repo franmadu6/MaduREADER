@@ -1,0 +1,39 @@
+{% extends "baselistas.html" %} 
+{% block listas2 %}
+    <body>
+
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            Lista: {{ libro }}
+                        </h2>
+                        <h2 class="section">
+                            Usuario: {{ usuario }}
+                        </h2>
+                        <div>
+                            {% for i in title %}
+                            <p>Titulo: {{ i }}</p>
+
+                            <a href="https://openlibrary.org{{ full_url[loop.index -1] }}">Enlace al libro</a> 
+
+                            <p>Ultima actualización: {{ last_update[loop.index -1] }}</p> 
+                    
+                            <img class="pinturillo" src="https://{{ picture[loop.index -1] }}">
+                                       
+                            <hr class="lagartija" />
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+
+    <!-- /#contact -->
+{% endblock %}
+
+ 

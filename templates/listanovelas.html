@@ -1,0 +1,33 @@
+{% extends "baselistamr.html" %}
+{% block listanovelas %}
+
+<!-- Book -->
+<section class="book" id="book">
+    <div id=fulldiv>
+       <h2>Listas de libros de MaduReader: Novelas</h2>
+            <div>
+
+                            {% for i in title %}
+                            <p>Nombre: {{ i }}</p>
+
+                            <p>Libros: {{ seed_count[loop.index -1] }}</p>
+
+                            <p>Recuento de ediciones: {{ edition_count[loop.index -1] }}</p> 
+                            
+                            <p>URL: {{ url[loop.index -1] }}</p> 
+                                  
+                            <p>Ultima actualización: {{ last_update[loop.index -1] }}</p>
+                                  
+                            <a href="https://openlibrary.org{{ full_url[loop.index -1] }}">Enlace al libro</a>  
+                                   
+                            <hr>
+                            {% endfor %}
+
+
+                        </div>
+    </div>
+</section> <!-- #book -->
+
+
+
+    {% endblock %}

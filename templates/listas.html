@@ -1,0 +1,70 @@
+{% extends "baselistas.html" %} 
+{% block listas %}
+    <body>
+
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            Listas
+                        </h2>
+                        <p class="light">
+                            ¿Que lista busca?
+                        </p>
+                        <p class="body">
+                            En esta sección podras <strong>buscar los libros </strong> de las listas de los usuarios.
+                        </p>
+                        <p class="body">
+                            Las <strong>listas de usuarios</strong>, se pueden ver previamente en <strong>buscar una lista</strong> y copiar su codigo.
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+
+    <section class="contact section-wrapper" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>
+                        Sistema de obtención de listas
+                    </h2>
+                    <p class="sub">
+                        Adelante
+                    </p>
+                    <div>
+                        <p><br><br></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 contactform">
+                    <form action="/listas2" method="post">
+                        <!-- Name -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- E-Mail -->
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-white" id="name" name="usuario" placeholder="usuario" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-white" id="name" name="libro" placeholder="libro" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Message Area -->
+                        <!-- Subtmit Button -->
+                        <button type="submit" class="btn btn-send" input id="cfsubmit" value="Say Hello">
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section> <!-- /.contact -->
+    <!-- /#contact -->
+{% endblock %}
+
+ 

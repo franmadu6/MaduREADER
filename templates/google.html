@@ -1,0 +1,68 @@
+{% extends "basegoogle.html" %} 
+{% block google %}
+    <body>
+
+    <!-- Book -->
+    <section class="book" id="book">
+        <div class="book-bg">
+            <div class="container section-wrapper">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="section">
+                            LibrosGoogle<img src="https://data.apkhere.com/6d/com.google.android.apps.books/5.1.9.rc06.250503688/icon.png!s">
+                        </h2>
+                        <p class="light">
+                            ¿Que libro busca?
+                        </p>
+                        <p class="body">
+                            En este caso la seleccion de libros se hace atraves de <strong>Google</strong>, en la que podras acceder a miles de libros disponibles.
+                        </p>
+                        <p class="body">
+                            Esta base de datos corresponde a la libreria de <strong>Google</strong> de manera os ofrecemos un mayor número de opciones a la hora de elegir el libro que te guste.
+                        </p>
+                        <p class="body">
+                            Además puedes<strong> guardar</strong> tus libros en tu coleccion de google y tambien la opción de <strong>comprarlos</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div> <!-- /.book-bg -->
+    </section> <!-- #book -->
+
+    <section class="contact section-wrapper" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>
+                        Sistema de obtención de libro
+                    </h2>
+                    <p class="sub">
+                        ¡Hora de leer!
+                    </p>
+                    <div>
+                        <p><br><br></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 contactform">
+                    <form action="/google2" method="post">
+                        <!-- Name -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- E-Mail -->
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-white" id="name" name="googlelibros" placeholder="Libro">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Message Area -->
+                        <!-- Subtmit Button -->
+                        <button type="submit" class="btn btn-send" input id="cfsubmit" value="buscar">
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section> <!-- /.contact -->
+    <!-- /#contact -->
+{% endblock %}
