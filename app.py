@@ -184,9 +184,7 @@ def listatemas():
         return render_template('error.html')
     
 #-----------pg  google
-@app.route('/google',methods=["GET","POST"])
-
-#apikey=AIzaSyB6ZaSdHJzxQOpB7BpgGcTzYxicWhRSaRg 
+@app.route('/google',methods=["GET","POST"]) 
 
 def obgoogle():
         
