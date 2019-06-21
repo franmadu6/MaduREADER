@@ -94,7 +94,7 @@ def obusuario2():
             listalastupdate.append(i.get("last_update","Desconocido"))
             
 
-        return render_template('usuario2.html',name=listaname,seed_count=listaseed,edition_count=listarecuent,url=listaurl,full_url=listafullurl,last_update=listalastupdate)
+        return render_template('usuario2.html',name=listaname,seed_count=listaseed,edition_count=listarecuent,url=listaurl,full_url=listafullurl,last_update=listalastupdate,usuario=usuario)
     else:
         return render_template('error.html')
 
@@ -153,19 +153,30 @@ def oblistasmr():
 #OL136133L poesía
 @app.route('/temas',methods=["GET","POST"])
 def listatemas():
-    mr = request.form.get("temas")
+    mr = request.form.get("temas")        
     b = requests.get('http://openlibrary.org/people/franmadu/lists/%s/seeds.json' % mr) 
-
+        
     if b.status_code == 200:
         datos=b.json()
-    
+        
         listatitl=[]
         listaseed=[]
         listarecuent=[]
         listaurl=[]
         listafullurl=[]
         listalastupdate=[]
-    
+        
+        if mr == "OL135747L":
+            mr = "Cuentos"
+        elif mr == "OL135750L":
+            mr = "Novelas"
+        elif mr == "OL135749L":
+            mr = "Terror"
+        else:
+            mr = "Poesía"
+            
+        print (mr) 
+        
         for i in datos["entries"]:
             listatitl.append(i.get("title"))
         
@@ -178,13 +189,17 @@ def listatemas():
             listafullurl.append(i.get("full_url","Desconocido"))
             
             listalastupdate.append(i.get("last_update","Desconocido"))
-
-        return render_template('listatemas.html',title=listatitl,seed_count=listaseed,edition_count=listarecuent,url=listaurl,full_url=listafullurl,last_update=listalastupdate)
+            
+            
+        
+        return render_template('listatemas.html',title=listatitl,seed_count=listaseed,edition_count=listarecuent,url=listaurl,full_url=listafullurl,last_update=listalastupdate,temas=mr)
     else:
         return render_template('error.html')
     
 #-----------pg  google
-@app.route('/google',methods=["GET","POST"]) 
+@app.route('/google',methods=["GET","POST"])
+
+#apikey=AIzaSyB6ZaSdHJzxQOpB7BpgGcTzYxicWhRSaRg 
 
 def obgoogle():
         
